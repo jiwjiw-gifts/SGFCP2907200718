@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Special Gifts! for Chanteach Pipatbawonnan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fef3f3;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            position: relative;
+        }
+
+        .open-button {
+            position: absolute;
+            bottom: 450px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px 50px;
+            background-color: #f0c8c7;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 25px;
+            cursor: pointer;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3 ease;
+        }
+
+        .open-button:hover {
+            background-color: #f0c8c7;
+            transform: translateX(-50%) scale(1.07);
+        }
+
+        .manual-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: #f0bfc5;
+            padding: 50px 80px;
+            border-radius: 25px;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid #aaa;
+            transition: transform 0.4s ease;
+            z-index: 10;
+        }
+
+        .manual-box.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .manual.box h1 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .sub-tag {
+            margin-top: 20px;
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid #aaa;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="open-button" onclick="goToNextPage()">Click to Open</button>
+
+    <div class="manual-box">
+        <h1>User Manual</h1>
+        <div class="sub-tag">คู่มือการใช้งาน</div>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "page2.html";
+        }
+    </script>
+</body>
+</html>

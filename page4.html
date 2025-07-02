@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Special Gifts! for Chanteach Pipatbawonnan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fef3f3;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #C08685;
+            padding: 60px 100px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 650px;
+        }
+
+        .title {
+            font-size: 45px;
+            font-weight: bold;
+            color: #f3f3f3;
+            margin-bottom: 50px;
+        }
+
+        .content-box {
+            background-color: #ffdddd;
+            color: #c14f4f;
+            border-radius: 20px;
+            padding: 0px 30px;
+            font-size: 21px;
+            line-height: 1.2;
+            margin-bottom: 35px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            white-space: pre-wrap; 
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .nav-button {
+            background-color: #ffdddd;
+            color: #c14f4f;
+            border: none;
+            padding: 10px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #f0bfc5;
+            transform: translateY(-3px) scale(1.07);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-button:active {
+            transform: scale(1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">Pink - คำที่อยากบอกเธอ</div>
+
+        <div class="content-box">
+            ใช่แล้ว! สีชมพูทุกใบคือประโยคที่เค้าอยากบอกเธอ<br>
+            หรือเป็นประโยคที่อยากชวนเธอคุย สงสัยล่ะสิ<br>
+            เพราะมันมีเยอะมากกกก<br>
+            เค้าเขียนเองกับมือทุกใบเลยนะ<br>
+            ไหนๆก็ไหนๆ ลองหยิบขึ้นมา 1 อัน แล้วอ่านเร็วว<br>
+
+            เค้ามีภารกิจให้เธอด้วยน้า หาประโยคนี้ให้เจอ!<br>
+            "ไม่ว่าเธอจะเป็นแบบไหน เค้าก็ภูมิใจในตัวเธอ  💖"
+        </div>
+
+        <div class="button-group">
+            <button class="nav-button" onclick="goBack()">Back</button>
+            <button class="nav-button" onclick="goNext()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "page3.html"; 
+        }
+        function goNext() {
+            window.location.href = "page5.html"; 
+        }
+    </script>
+
+</body>
+</html>

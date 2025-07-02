@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Special Gifts! for Chanteach Pipatbawonnan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fef3f3;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 55px;
+            font-weight: bold;
+            color: #C08685;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 30px;
+            color: #333;
+            max-width: 680px;
+            padding: 0 20px;
+        }
+
+        .back-group {
+            margin-top: 40px;
+            display: flex;
+            gap: 60px;
+        }
+
+        .nav-button {
+            background-color: #ffdddd;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: lab(51.32% 24.28 10.76);
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3 ease;
+        }
+
+        .nav-button:hover {
+            background-color: #f0bfc5;
+            transform: translateY(-3px) scale(1.07);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button:active {
+            transform: scale(1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Welcome to User Manual! 🎁</div>
+    <div class="message">
+        <p>นี่เป็นคู่มือการใช้งานของขวดโหลนี้✨</p>
+        <p>โปรดอ่านขั้นตอนการใช้งานอย่างละเอียด</p> 
+        <p>และทำตามขั้นตอนอย่างเคร่งครัด!!</p>
+        <p>(เตือนแล้วนะ)</p>
+    </div>
+
+    <div class="button-group">
+        <button class="nav-button" onclick="goBack()">Back</button>
+        <button class="nav-button" onclick="goNext()">Next</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+
+        function goNext() {
+            window.location.href = "page3.html"
+        }
+    </script>
+
+</body>
+</html>
