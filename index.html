@@ -85,6 +85,17 @@
         <div class="sub-tag">คู่มือการใช้งาน</div>
     </div>
 
+    <iframe id="music" src="https://www.youtube.com/embed/WtcKJtwMD2E?start=0&end=12&controls=0&modestbranding=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <script>
+        function playAndGo() {
+            const iframe = document.getElementById('music');
+            iframe.src = "https://www.youtube.com/embed/WtcKJtwMD2E?start=0&end=12&autoplay=1&controls=0&modestbranding=1&rel=0";
+            setTimeout(() => {
+                window.location.href = "page2.html";
+                }, 1500);
+        }
+
     <script>
         function goToNextPage() {
             window.location.href = "page2.html";
