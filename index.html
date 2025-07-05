@@ -85,32 +85,29 @@
         <div class="sub-tag">คู่มือการใช้งาน</div>
     </div>
 
-    <script>
-        function goToNextPage() {
-            window.location.href = "page2.html";
-        }
-    </script>
-
     <audio id="bg-music" autoplay loop>
         <source src="https://raw.githubusercontent.com/jiwjiw-gifts/SGFCP2907200718/main/ดาวหางฮัลเล่ย์.mp3" type="audio/mpeg">
     </audio>
 
     <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            const music = document.getElementById("bg-music");
-            const playPromise = music.play();
+function goToNextPage() {
+    const music = document.getElementById("bg-music");
+    const playPromise = music.play();
 
-            if (playPromise !== undefined) {
-                playPromise
-                .then(() => {
-                    console.log("เพลงเล่นสำเร็จ");
-                })
-                .catch(error => {
-                    console.log("เบราว์เซอร์ยังไม่อนุญาตให้เล่นเสียง จนกว่าจะมีการคลิกหรือแตะหน้าจอ", error);
-                });
-            }
-        });
-    </script>
-
+    if (playPromise !== undefined) {
+        playPromise
+            .then(() => {
+                console.log("เพลงเล่นสำเร็จ");
+                window.location.href = "page2.html"; 
+            })
+            .catch(error => {
+                console.log("เบราว์เซอร์ยังไม่อนุญาตให้เล่นเสียง จนกว่าจะมีการคลิกหรือแตะหน้าจอ", error);
+                window.location.href = "page2.html";
+            });
+    } else {
+        window.location.href = "page2.html";
+    }
+}
+</script>
 </body>
 </html>
