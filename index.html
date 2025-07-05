@@ -78,23 +78,38 @@
 </head>
 <body>
 
-    <button class="open-button" onclick="playAndGo()">Click to Open</button>
+    <button class="open-button" onclick="goToNextPage()">Click to Open</button>
 
     <div class="manual-box">
         <h1>User Manual</h1>
         <div class="sub-tag">คู่มือการใช้งาน</div>
     </div>
 
-    <iframe id="music" src="https://www.youtube.com/embed/WtcKJtwMD2E?start=0&end=12&controls=0&modestbranding=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <script>
+        function goToNextPage() {
+            window.location.href = "page2.html";
+        }
+    </script>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="ดาวหางฮัลเล่ย์.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
-        function playAndGo() {
-            const iframe = document.getElementById('music');
-            iframe.src = "https://www.youtube.com/embed/WtcKJtwMD2E?start=0&end=12&autoplay=1&controls=0&modestbranding=1&rel=0";
-            setTimeout(() => {
-                window.location.href = "page2.html";
-                }, 1500);
-        }
+        window.addEventListener('DOMContentLoaded', function () {
+            const music = document.getElementById("bg-music");
+            const playPromise = music.play();
+
+            if (playPromise !== undefined) {
+                playPromise
+                .then(() => {
+                    console.log("เพลงเล่นสำเร็จ");
+                })
+                .catch(error => {
+                    console.log("เบราว์เซอร์ยังไม่อนุญาตให้เล่นเสียง จนกว่าจะมีการคลิกหรือแตะหน้าจอ 😅", error);
+                });
+            }
+        });
     </script>
 
 </body>
