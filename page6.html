@@ -105,6 +105,11 @@
         </div>
     </div>
 
+    <audio id="bg-music" autoplay loop>
+        <source src="bgmusicpage6.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         function goBack() {
             window.location.href = "page3.html";
@@ -113,13 +118,17 @@
         function goNext() {
             window.location.href = "page7.html";
         }
-    </script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const music = document.getElementById("bg-music");
+            const playPromise = music.play();
 
-    <audio autoplay loop>
-        <audio id="bg-music" autoplay loop>
-        <source src="bgmusicpage6.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-</audio>
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => console.log("เล่นเพลงสำเร็จ"))
+                    .catch((error) => console.log("เบราว์เซอร์ยังไม่อนุญาตให้เล่นเพลงอัตโนมัติ", error));
+            }
+        });
+    </script>
 
 </body>
 </html>
