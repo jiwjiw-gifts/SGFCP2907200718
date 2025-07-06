@@ -77,6 +77,10 @@
             transform: scale(1);
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
+        audio {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -105,30 +109,31 @@
         </div>
     </div>
 
-    <audio id="bg-music" autoplay loop>
-        <source src="bgmusicpage6.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+   <audio id="bg-music" autoplay loop>
+        <source src="landokmai.mp3" type="audio/mp3">
     </audio>
 
     <script>
         function goBack() {
             window.location.href = "page3.html";
-        }
+    }
 
         function goNext() {
-            window.location.href = "page7.html";
-        }
+        window.location.href = "page7.html";
+    }
+
         window.addEventListener('DOMContentLoaded', function () {
+            const shouldPlay = localStorage.getItem("playMusic");
             const music = document.getElementById("bg-music");
-            const playPromise = music.play();
 
-            if (playPromise !== undefined) {
-                playPromise
-                    .then(() => console.log("เล่นเพลงสำเร็จ"))
-                    .catch((error) => console.log("เบราว์เซอร์ยังไม่อนุญาตให้เล่นเพลงอัตโนมัติ", error));
-            }
-        });
+            if (shouldPlay === "true" && music) {
+                music.play().then(() => {
+                    localStorage.removeItem("playMusic"); // ลบ flag ทิ้ง
+                }).catch((err) => {
+                    console.log("เล่นเพลงไม่สำเร็จ:", err);
+                });
+        }
+    });
     </script>
-
 </body>
 </html>
