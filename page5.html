@@ -99,7 +99,7 @@
 
         <div class="button-group">
             <button class="nav-button" onclick="goBack()">Back</button>
-            <button class="nav-button" onclick="goNext()">Next</button>
+            <button class="nav-button" onclick="goToPage6()">Next</button>
         </div>
     </div>
 
@@ -109,6 +109,10 @@
         }
 
         function goNext() {
+            window.location.href = "page6.html";
+        }
+        function goToPage6() {
+            localStorage.setItem("playMusic", "true");  
             window.location.href = "page6.html";
         }
     </script>
