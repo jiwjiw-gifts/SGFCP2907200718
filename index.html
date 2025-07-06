@@ -53,7 +53,7 @@
             transform: translate(-50%, -50%) scale(1);
         }
 
-        .manual.box h1 {
+        .manual-box h1 {
             margin: 0;
             font-size: 42px;
             font-weight: bold;
@@ -85,29 +85,11 @@
         <div class="sub-tag">คู่มือการใช้งาน</div>
     </div>
 
-    <audio id="bg-music" autoplay loop>
-        <source src="https://raw.githubusercontent.com/jiwjiw-gifts/SGFCP2907200718/main/ดาวหางฮัลเล่ย์.mp3" type="audio/mpeg">
-    </audio>
-
     <script>
-function goToNextPage() {
-    const music = document.getElementById("bg-music");
-    const playPromise = music.play();
+        function goToNextPage() {
+            window.location.href = "page2.html";
+        }
+    </script>
 
-    if (playPromise !== undefined) {
-        playPromise
-            .then(() => {
-                console.log("เพลงเล่นสำเร็จ");
-                window.location.href = "page2.html"; 
-            })
-            .catch(error => {
-                console.log("เบราว์เซอร์ยังไม่อนุญาตให้เล่นเสียง จนกว่าจะมีการคลิกหรือแตะหน้าจอ", error);
-                window.location.href = "page2.html";
-            });
-    } else {
-        window.location.href = "page2.html";
-    }
-}
-</script>
 </body>
 </html>
