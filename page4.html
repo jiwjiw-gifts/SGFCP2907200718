@@ -19,39 +19,50 @@
 
         .container {
             background-color: #C08685;
-            padding: 10px 90px;
+            padding: 20px 50px;
             border-radius: 25px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 90%;
-            max-width: 575px;
+            max-width: 500px;
         }
 
         .title {
-            font-size: 38px;
+            font-size: 50px;
             font-weight: bold;
             color: #f3f3f3;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
-        .content-box {
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu a {
             background-color: #ffdddd;
             color: #c14f4f;
-            border-radius: 20px;
-            padding: 3px 30px;
-            font-size: 21px;
-            line-height: 1.0;
-            margin-bottom: 35px;
-            text-align: left;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            white-space: pre-wrap; 
+            text-decoration: none;
+            padding: 25px 70px;
+            border-radius: 25px;
+            font-size: 23px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .menu a:hover {
+            background-color: #ffcaca;
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
         }
 
         .button-group {
-            display: flex;
+            display:flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 10px;
+            margin-top: 30px;
         }
 
         .nav-button {
@@ -81,30 +92,28 @@
 </head>
 <body>
 
+    <iframe src="music.html" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
+
     <div class="container">
-        <div class="title">Pink - คำที่อยากบอกเธอ</div>
+        <div class="title">📖 Contents</div>
 
-        <div class="content-box">
-        ใช่แล้ว! สีชมพูทุกใบคือประโยคที่เค้าอยากบอกเธอ<br>
-        หรือเป็นประโยคที่อยากชวนเธอคุย สงสัยล่ะสิ<br>
-        เพราะมันมีเยอะมากกกก<br>
-        เค้าเขียนเองกับมือทุกใบเลยนะ<br>
-        ไหนๆก็ไหนๆ ลองหยิบขึ้นมา 1 อัน แล้วอ่านเร็วว<br>
-
-        เค้ามีภารกิจให้เธอด้วยน้า หาประโยคนี้ให้เจอ!<br>
-        "ไม่ว่าเธอจะเป็นแบบไหน เค้าก็ภูมิใจในตัวเธอ  💖"
+        <div class="menu">
+            <a href="page4.html">Pink</a>
+            <a href="page5.html">Purple</a>
+            <a href="page6.html">Green</a>
+            <a href="page7.html">White</a>
         </div>
 
         <div class="button-group">
-            <button class="nav-button" onclick="goBack()">Back</button>
-            <button class="nav-button" onclick="goNext()">Next</button>
-        </div>
+        <button class="nav-button" onclick="goBack()">Back</button>
+        <button class="nav-button" onclick="goNext()">Next</button>
     </div>
 
     <script>
         function goBack() {
-            window.location.href = "page3.html"; 
+            window.location.href = "page3.html";
         }
+
         function goNext() {
             window.location.href = "page5.html"; 
         }

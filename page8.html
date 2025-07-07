@@ -17,25 +17,41 @@
             text-align: center;
         }
 
+        .container {
+            background-color: #C08685;
+            padding: 20px 55px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .title {
+            font-size: 35px;
+            font-weight: bold;
+            color: #f3f3f3;
+            margin-bottom: 20px;
+        }
+
         .content-box {
             background-color: #ffdddd;
             color: #c14f4f;
             border-radius: 20px;
-            padding: 40px 70px;
-            font-size: 23px;
-            line-height: 1.5;
+            padding: 20px 25px;
+            font-size: 21px;
+            line-height: 1.3;
             margin-bottom: 35px;
             text-align: left;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             white-space: pre-wrap;
-            max-width: 500px;
-            width: 90%;
         }
 
         .button-group {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 10px;
         }
 
         .nav-button {
@@ -44,7 +60,7 @@
             border: none;
             padding: 22px 70px;
             border-radius: 30px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
@@ -65,26 +81,34 @@
 </head>
 <body>
 
-    <div class="content-box">
-คิดว่ามีแค่นี้อะดิ No No!
-ทำมาแล้วก็ต้องเอาให้สุด สนุกดีนะ 
-นั่งทำอันนี้ให้เธอ ทั้งเขียนโค้ด แก้ bug นั่งเขียน 
-นั่งพับกระดาษใส่โหล
-นอกจากตั้งใจรักแล้วยังตั้งใจทำด้วย อิอิ (หูแดงมั้ยน้า)
+    <iframe src="music.html" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
 
-ต่อมา ! เป็นกติกาของขวดโหลนี้ 
-ไม่มีข้อแม้ในการปฏิเสธ 
-เพราะขวดโหลนี้เต็มไปด้วยการเจิมและการอธิษฐาน!
-    </div>
+    <div class="container">
+        <div class="title">White - เหตุผลที่เค้ารักเธอ</div>
 
-    <div class="button-group">
-        <button class="nav-button" onclick="goBack()">Back</button>
-        <button class="nav-button" onclick="goNext()">Next</button>
+        <div class="content-box">
+เห็นอันนี้ตอนเขียน draft ไว้มันเยอะมากก  
+เค้าก็ไม่รู้ว่าทำไมมันเยอะขนาดนั้นเหมือนกัน       
+แต่ทั้งหมดก็พระเจ้าอยู่ด้วยน้า อธิษฐานเสมอ
+ก่อน ขณะ และหลังเขียน 
+ฟีลลงคาถาอาคม5555555555
+
+        (ไหนลองหยิบขึ้นมา 1 อันเร็ววว)
+            
+    "เค้ารักเธอเพราะเธอคือคนที่เค้าอธิษฐานไว้
+กับพระเจ้าก่อนเราเจอกัน ง่ายๆคือ 
+พระเจ้าตอบคำอธิษฐานและส่งเธอมานั่นเอง🤍"
+        </div>
+
+        <div class="button-group">
+            <button class="nav-button" onclick="goBack()">Back</button>
+            <button class="nav-button" onclick="goNext()">Next</button>
+        </div>
     </div>
 
     <script>
         function goBack() {
-            window.location.href = "page7.html";
+            window.location.href = "page4.html";
         }
 
         function goNext() {
