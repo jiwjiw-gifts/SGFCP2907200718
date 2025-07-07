@@ -90,9 +90,13 @@
 
     <script>
         function goToNextPage() {
+            document.getElementById("musicFrame").src = "music.html";
             window.location.href = "page2.html";
         }
     </script>
+
+    <iframe id="musicFrame" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
+
 
 </body>
 </html>
