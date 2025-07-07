@@ -109,10 +109,6 @@
         </div>
     </div>
 
-   <audio id="bg-music" autoplay loop>
-        <source src="landokmai.mp3" type="audio/mp3">
-    </audio>
-
     <script>
         function goBack() {
             window.location.href = "page3.html";
@@ -122,18 +118,6 @@
         window.location.href = "page7.html";
     }
 
-        window.addEventListener('DOMContentLoaded', function () {
-            const shouldPlay = localStorage.getItem("playMusic");
-            const music = document.getElementById("bg-music");
-
-            if (shouldPlay === "true" && music) {
-                music.play().then(() => {
-                    localStorage.removeItem("playMusic"); // ลบ flag ทิ้ง
-                }).catch((err) => {
-                    console.log("เล่นเพลงไม่สำเร็จ:", err);
-                });
-        }
-    });
     </script>
 </body>
 </html>
