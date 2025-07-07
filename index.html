@@ -79,6 +79,8 @@
 </head>
 <body>
 
+    <audio id="bgMusic" src="ดาวหางฮัลเล่ย์Piano&I.mp3" preload="auto" loop></audio>
+
     <iframe src="music.html" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
 
     <button class="open-button" onclick="goToNextPage()">Click to Open</button>
@@ -89,10 +91,13 @@
     </div>
 
     <script>
-        function goToNextPage() {
-            document.getElementById("musicFrame").src = "music.html";
-            window.location.href = "page2.html";
-        }
+    
+   function goToNextPage() {
+        const music = document.getElementById("bgMusic");
+        if (music) music.play(); 
+        window.location.href = "page2.html";
+    }
+    
     </script>
 
     <iframe id="musicFrame" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
