@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #fef3f3;
+            background-color: #b2818d;
             font-family: 'Segoe UI', sans-serif;
             height: 100vh;
             display: flex;
@@ -21,12 +21,13 @@
         .title {
             font-size: 55px;
             font-weight: bold;
-            color: #080808;
+            color: #fffaf9;
             margin-bottom: 40px;
         }
 
         #loginBox {
-            background-color: #5f6a9c;
+            background-color: #fffaf9;
+            border: 2px solid #e0d4d1;
             padding: 35px 70px;
             border-radius: 25px;
             box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
@@ -39,7 +40,7 @@
             margin: 0 0 20px 0;
             font-size: 30px;
             font-weight: bold;
-            color: #ffffff;
+            color: #404040;
         }
 
         #passwordInput {
@@ -58,7 +59,8 @@
             font-size: 24px;
             border-radius: 25px;
             border: none;
-            background-color: #9fb6cf;
+            background-color: #404040;
+            color: #fffaf9;
             cursor: pointer;
             font-weight: bold;
             width: 100%;
@@ -66,17 +68,20 @@
         }
 
         #loginButton:hover {
-            background-color: #d7e6f7;
+            background-color: #404040;
+            color: #fffaf9;
+            transform: translateY(-3px) scale(1.10);
         }
 
         #loginButton.hover-effect {
-             background-color: #d7e6f7;
+            background-color: #fffaf9;
+            color: #404040;
         }
 
         #errorMsg {
             margin-top: 15px;
             height: 22px;
-            color: red;
+            color: #fffaf9;
             font-weight: bold;
             font-size: 20px;
         }
@@ -84,12 +89,10 @@
 </head>
 <body>
 
-    <iframe src="music.html" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
-
     <div class="title">Please log in to access the website!</div>
 
     <div id="loginBox">
-        <h2>Please enter your password</h2>
+        <h2>*Hint* It's birthday!</h2>
         <input type="password" id="passwordInput" placeholder="password" />
         <button id="loginButton" onclick="checkPassword()">Enter</button>
     </div>
