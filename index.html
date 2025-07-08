@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <title>Music</title></head>
     <meta charset="UTF-8">
     <title>Special Gifts! for Chanteach Pipatbawonnan</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #fef3f3;
+            background-color: #b2818d;
             height: 100vh;
             font-family: 'Segoe UI', sans-serif;
             position: relative;
@@ -20,7 +19,8 @@
             left: 50%;
             transform: translateX(-50%);
             padding: 30px 50px;
-            background-color: #f0c8c7;
+            background-color: #f4f2f1;
+            color: #404040;
             border: none;
             border-radius: 25px;
             font-weight: bold;
@@ -31,8 +31,9 @@
         }
 
         .open-button:hover {
-            background-color: #f0c8c7;
-            transform: translateX(-50%) scale(1.07);
+            background-color: #f4f2f1;
+            color: #404040;
+            transform: translateX(-50%) scale(1.20);
         }
 
         .manual-box {
@@ -40,7 +41,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0);
-            background-color: #f0bfc5;
+            background-color: #eee8df;
             padding: 50px 80px;
             border-radius: 25px;
             box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
@@ -79,10 +80,6 @@
 </head>
 <body>
 
-    <audio id="bgMusic" src="ดาวหางฮัลเล่ย์Piano&I.mp3" preload="auto" loop></audio>
-
-    <iframe src="music.html" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
-
     <button class="open-button" onclick="goToNextPage()">Click to Open</button>
 
     <div class="manual-box">
@@ -93,15 +90,10 @@
     <script>
     
    function goToNextPage() {
-        const music = document.getElementById("bgMusic");
-        if (music) music.play(); 
         window.location.href = "page2.html";
     }
     
-    </script>
-
-    <iframe id="musicFrame" style="width:1px; height:1px; position:absolute; left:-9999px;"></iframe>
-
+    </script>  
 
 </body>
 </html>
